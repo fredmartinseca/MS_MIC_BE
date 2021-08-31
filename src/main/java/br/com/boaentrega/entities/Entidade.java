@@ -10,7 +10,7 @@ import br.com.boaentrega.entities.enums.EnumTipoPessoa;
 public class Entidade implements Serializable {
 	private static final long serialVersionUID = -5436427076028257302L;
 	
-	private Long idClient;
+	private Long idEntidade;
 	private String firstName;
 	private String fullName;
 	private String razaoSocial;
@@ -21,9 +21,9 @@ public class Entidade implements Serializable {
 	private EnumTipoPessoa tipoPessoa;
 	private EnumTipoEntidade tipoEntidade;
 
-	public Entidade(Long idClient, String firstName, String fullName, String razaoSocial, String nomeFantasia,
+	public Entidade(Long idEntidade, String firstName, String fullName, String razaoSocial, String nomeFantasia,
 			String cpfCnpj, EnumTipoPessoa tipoPessoa, EnumTipoEntidade tipoEntidade) {
-		this.idClient = idClient;
+		this.idEntidade = idEntidade;
 		this.firstName = firstName;
 		this.fullName = fullName;
 		this.razaoSocial = razaoSocial;
@@ -36,12 +36,12 @@ public class Entidade implements Serializable {
 	public Entidade() {
 	}
 
-	public Long getIdClient() {
-		return idClient;
+	public Long getIdEntidade() {
+		return idEntidade;
 	}
 
-	public void setIdClient(Long idClient) {
-		this.idClient = idClient;
+	public void setIdEntidade(Long idClient) {
+		this.idEntidade = idClient;
 	}
 
 	public String getFirstName() {
