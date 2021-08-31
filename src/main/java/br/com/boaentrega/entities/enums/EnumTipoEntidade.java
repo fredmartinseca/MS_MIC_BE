@@ -1,12 +1,12 @@
 package br.com.boaentrega.entities.enums;
 
-public enum EnumTipoPessoa {
+public enum EnumTipoEntidade {
 	
-	FISICA(1),JURIDICA(2);
+	CLIENTE(1),FORNECEDOR(2),DEPOSITO(3);
 	
 	private final int valor;
 	
-	EnumTipoPessoa(int valorOpcao){
+	EnumTipoEntidade(int valorOpcao){
 		valor = valorOpcao;
 		}
 	

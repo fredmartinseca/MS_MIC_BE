@@ -4,9 +4,10 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import br.com.boaentrega.entities.enums.EnumTipoEntidade;
 import br.com.boaentrega.entities.enums.EnumTipoPessoa;
 
-public class Cliente implements Serializable {
+public class Entidade implements Serializable {
 	private static final long serialVersionUID = -5436427076028257302L;
 	
 	private Long idClient;
@@ -18,9 +19,10 @@ public class Cliente implements Serializable {
 	private Set<Endereco> enderecos = new HashSet<Endereco>();
 	private Set<Telefone> telefones = new HashSet<Telefone>();
 	private EnumTipoPessoa tipoPessoa;
+	private EnumTipoEntidade tipoEntidade;
 
-	public Cliente(Long idClient, String firstName, String fullName, String razaoSocial, String nomeFantasia,
-			String cpfCnpj, EnumTipoPessoa tipoPessoa) {
+	public Entidade(Long idClient, String firstName, String fullName, String razaoSocial, String nomeFantasia,
+			String cpfCnpj, EnumTipoPessoa tipoPessoa, EnumTipoEntidade tipoEntidade) {
 		this.idClient = idClient;
 		this.firstName = firstName;
 		this.fullName = fullName;
@@ -28,9 +30,10 @@ public class Cliente implements Serializable {
 		this.nomeFantasia = nomeFantasia;
 		this.cpfCnpj = cpfCnpj;
 		this.tipoPessoa = tipoPessoa;
+		this.tipoEntidade = tipoEntidade;
 	}
 
-	public Cliente() {
+	public Entidade() {
 	}
 
 	public Long getIdClient() {
@@ -103,6 +106,14 @@ public class Cliente implements Serializable {
 
 	public void setTipoPessoa(EnumTipoPessoa tipoPessoa) {
 		this.tipoPessoa = tipoPessoa;
+	}
+
+	public EnumTipoEntidade getTipoEntidade() {
+		return tipoEntidade;
+	}
+
+	public void setTipoEntidade(EnumTipoEntidade tipoEntidade) {
+		this.tipoEntidade = tipoEntidade;
 	}
 
 }
